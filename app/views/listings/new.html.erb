@@ -1,0 +1,60 @@
+<%= render 'partial/navbar' %>
+<div class="container">
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<div class="text-center">
+						<span style="font-size:24px;">自転車を掲載する</span>
+					</div>
+				</div>
+
+				<div class="panel-body">
+					<!-- ここからフォーム -->
+					<%= form_for @listing do |f| %>
+						<div class="row">
+							<div class="col-md-12 select">
+								<div class="form-group">
+									<label>自転車の種類</label>
+									<%= f.select :home_type, [["ママチャリ","ママチャリ"], ["クロスバイク","クロスバイク"], ["ロードバイク","ロードバイク"]], {prompt:"選択してください"}, {required: 'true', autofocus: 'true', class: 'form-control'} %>
+								</div>
+							</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-md-12 select">
+								<div class="form-group">
+									<label>自転車歴</label>
+									<%= f.select :breeding_years, [["1年",1], ["2年",2], ["3年",3], ["4年",4], ["5年",5], ["6年以上",6]], {prompt:"選択してください"}, {required: 'true', autofocus: 'true', class: 'form-control'} %>
+								</div>
+							</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-md-12 select">
+								<div class="form-group">
+									<label>自転車のサイズ</label>
+									<%= f.select :pet_size, [["小型","小型"], ["中型","中型"], ["大型","大型"], ["超大型","超大型"]], {prompt:"選択してください"}, {required: 'true', autofocus: 'true', class: 'form-control'} %>
+								</div>
+							</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-md-12 select">
+								<div class="form-group">
+									<label>自転車のサイズ(適正身長)</label>
+									<%= f.select :pet_type, [["〜１３０cm","〜１３０cm"], ["１３０〜１４０cm","１３０〜１４０cm"], ["１４０〜１５０cm","１４０〜１５０cm"], ["１５０〜１６０cm","１５０〜１６０cm"], ["１６０〜１７０cm","１６０〜１７０cm"], ["１７０〜１８０cm","１７０〜１８０cm"], ["１８０〜cm","１８０〜cm"]], {prompt:"選択してください"}, {required: 'true', autofocus: 'true', class: 'form-control'} %>
+								</div>
+							</div>
+						</div>
+						<br>
+						<div class="actions">
+							<%= f.submit "Save", class: "btn btn-danger" %>
+						</div>
+					<% end %>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>

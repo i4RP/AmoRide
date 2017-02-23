@@ -1,0 +1,42 @@
+I"�(function() {
+  $(document).ready(function() {
+    var createHandler, form, handler, indicator, payButton, submitting;
+    if (typeof StripeCheckout === "undefined" || StripeCheckout === null) {
+      return;
+    }
+    submitting = false;
+    payButton = $('.pay-button');
+    form = payButton.closest('form');
+    indicator = form.find('.indicator').height(form.outerHeight());
+    handler = null;
+    createHandler = function() {
+      return handler = StripeCheckout.configure({
+        key: window.publishable["platform"],
+        email: window.currentUserEmail,
+        allowRememberMe: false,
+        closed: function() {
+          if (!submitting) {
+            return form.removeClass('processing');
+          }
+        },
+        token: function(token) {
+          submitting = true;
+          form.find('input[name=token]').val(token.id);
+          return form.get(0).submit();
+        }
+      });
+    };
+    createHandler();
+    return payButton.click(function(e) {
+      e.preventDefault();
+      form.addClass('processing');
+      return handler.open({
+        name: 'お支払い額',
+        description: window.totalPrice + " 円",
+        amount: ''
+      });
+    });
+  });
+
+}).call(this);
+:ET
