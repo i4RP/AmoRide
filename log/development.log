@@ -50195,3 +50195,66 @@ Completed 200 OK in 98ms (Views: 96.2ms | ActiveRecord: 1.3ms)
 
 
 Started GET "/assets/amoride-top.jpg" for ::1 at 2017-02-24 07:06:33 +0900
+
+
+Started GET "/" for ::1 at 2017-02-24 07:09:15 +0900
+Processing by PagesController#index as HTML
+  Rendered partial/_navbar.html.erb (0.7ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mListing Load (0.3ms)[0m  [1mSELECT "listings".* FROM "listings" WHERE "listings"."user_id" = ?[0m  [["user_id", 5]]
+  [1m[35mPhoto Load (0.1ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."listing_id" = ?  [["listing_id", 4]]
+  [1m[36mListing Load (0.1ms)[0m  [1mSELECT "listings".* FROM "listings" WHERE "listings"."user_id" = ?[0m  [["user_id", 6]]
+  [1m[35mPhoto Load (0.1ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."listing_id" = ?  [["listing_id", 7]]
+  [1m[36mListing Load (0.1ms)[0m  [1mSELECT "listings".* FROM "listings" WHERE "listings"."user_id" = ?[0m  [["user_id", 8]]
+  [1m[35mPhoto Load (0.1ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."listing_id" = ?  [["listing_id", 8]]
+  [1m[36mListing Load (0.1ms)[0m  [1mSELECT "listings".* FROM "listings" WHERE "listings"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[35mPhoto Load (0.2ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."listing_id" = ?  [["listing_id", 9]]
+  Rendered pages/_footer.html.erb (0.1ms)
+  Rendered pages/index.html.erb within layouts/application (26.5ms)
+Completed 200 OK in 109ms (Views: 107.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/amoride-top.jpg" for ::1 at 2017-02-24 07:09:15 +0900
+
+
+Started GET "/" for ::1 at 2017-02-24 07:09:38 +0900
+Processing by PagesController#index as HTML
+  Rendered partial/_navbar.html.erb (0.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mListing Load (0.3ms)[0m  SELECT "listings".* FROM "listings" WHERE "listings"."user_id" = ?  [["user_id", 5]]
+  [1m[36mPhoto Load (0.1ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."listing_id" = ?[0m  [["listing_id", 4]]
+  [1m[35mListing Load (0.1ms)[0m  SELECT "listings".* FROM "listings" WHERE "listings"."user_id" = ?  [["user_id", 6]]
+  [1m[36mPhoto Load (0.1ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."listing_id" = ?[0m  [["listing_id", 7]]
+  [1m[35mListing Load (0.2ms)[0m  SELECT "listings".* FROM "listings" WHERE "listings"."user_id" = ?  [["user_id", 8]]
+  [1m[36mPhoto Load (0.1ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."listing_id" = ?[0m  [["listing_id", 8]]
+  [1m[35mListing Load (0.1ms)[0m  SELECT "listings".* FROM "listings" WHERE "listings"."user_id" = ?  [["user_id", 9]]
+  [1m[36mPhoto Load (0.2ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."listing_id" = ?[0m  [["listing_id", 9]]
+  Rendered pages/_footer.html.erb (0.1ms)
+  Rendered pages/index.html.erb within layouts/application (25.9ms)
+Completed 200 OK in 110ms (Views: 107.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/amoride-top.jpg" for ::1 at 2017-02-24 07:09:38 +0900
+
+
+Started GET "/" for ::1 at 2017-02-24 07:11:47 +0900
+Processing by PagesController#index as HTML
+  Rendered partial/_navbar.html.erb (0.4ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mListing Load (0.2ms)[0m  [1mSELECT "listings".* FROM "listings" WHERE "listings"."user_id" = ?[0m  [["user_id", 5]]
+  [1m[35mPhoto Load (0.1ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."listing_id" = ?  [["listing_id", 4]]
+  [1m[36mListing Load (0.1ms)[0m  [1mSELECT "listings".* FROM "listings" WHERE "listings"."user_id" = ?[0m  [["user_id", 6]]
+  [1m[35mPhoto Load (0.1ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."listing_id" = ?  [["listing_id", 7]]
+  [1m[36mListing Load (0.1ms)[0m  [1mSELECT "listings".* FROM "listings" WHERE "listings"."user_id" = ?[0m  [["user_id", 8]]
+  [1m[35mPhoto Load (0.1ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."listing_id" = ?  [["listing_id", 8]]
+  [1m[36mListing Load (0.1ms)[0m  [1mSELECT "listings".* FROM "listings" WHERE "listings"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[35mPhoto Load (0.1ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."listing_id" = ?  [["listing_id", 9]]
+  Rendered pages/_footer.html.erb (0.0ms)
+  Rendered pages/index.html.erb within layouts/application (22.7ms)
+Completed 200 OK in 2044ms (Views: 2042.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.self-70e077b5acb9b47a2ffb0ff57fa31d638a436d3a4de650312007b0e00154ed3b.css?body=1" for ::1 at 2017-02-24 07:11:49 +0900
+
+
+Started GET "/assets/amoride-top.jpg" for ::1 at 2017-02-24 07:11:49 +0900
