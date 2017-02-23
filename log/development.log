@@ -45896,3 +45896,53 @@ Completed 200 OK in 5ms (Views: 1.2ms | ActiveRecord: 0.5ms)
             FROM sqlite_temp_master
             WHERE name='index_users_on_email' AND type='index'
 
+
+
+Started GET "/" for ::1 at 2017-02-24 05:04:33 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 8]]
+  Rendered partial/_navbar.html.erb (25.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mListing Load (0.8ms)[0m  SELECT "listings".* FROM "listings" WHERE "listings"."user_id" = ?  [["user_id", 5]]
+  [1m[36mPhoto Load (0.6ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."listing_id" = ?[0m  [["listing_id", 4]]
+  [1m[35mListing Load (0.1ms)[0m  SELECT "listings".* FROM "listings" WHERE "listings"."user_id" = ?  [["user_id", 6]]
+  [1m[36mPhoto Load (0.1ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."listing_id" = ?[0m  [["listing_id", 7]]
+  [1m[35mListing Load (0.1ms)[0m  SELECT "listings".* FROM "listings" WHERE "listings"."user_id" = ?  [["user_id", 8]]
+  [1m[36mPhoto Load (0.2ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."listing_id" = ?[0m  [["listing_id", 8]]
+  [1m[35mListing Load (0.1ms)[0m  SELECT "listings".* FROM "listings" WHERE "listings"."user_id" = ?  [["user_id", 9]]
+  [1m[36mPhoto Load (0.1ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."listing_id" = ?[0m  [["listing_id", 9]]
+  Rendered pages/_footer.html.erb (0.3ms)
+  Rendered pages/index.html.erb within layouts/application (2801.8ms)
+Completed 200 OK in 3053ms (Views: 3031.3ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/application.self-1846ff0ac1cea48681ba4e1b687a5c2967a9112aae33a2eb9c1a969adb42dd76.css?body=1" for ::1 at 2017-02-24 05:04:37 +0900
+
+
+Started GET "/assets/person-845325_1920.jpg" for ::1 at 2017-02-24 05:04:37 +0900
+
+
+Started GET "/search?utf8=%E2%9C%93&lat=38.3459963&lng=-0.4906855000000405&search=%E3%82%B9%E3%83%9A%E3%82%A4%E3%83%B3%E3%83%90%E3%83%AC%E3%83%B3%E3%82%B7%E3%82%A2%E3%82%A2%E3%83%AA%E3%82%AB%E3%83%B3%E3%83%86&start_date=&end_date=&commit=%E6%A4%9C%E7%B4%A2" for ::1 at 2017-02-24 05:04:49 +0900
+Processing by PagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "lat"=>"38.3459963", "lng"=>"-0.4906855000000405", "search"=>"スペインバレンシアアリカンテ", "start_date"=>"", "end_date"=>"", "commit"=>"検索"}
+  [1m[35mListing Load (0.3ms)[0m  SELECT DISTINCT listings.*, (69.09332411348201 * ABS(listings.latitude - 38.3459963) * 0.7071067811865475) + (59.836573914187355 * ABS(listings.longitude - -0.4906855000000405) * 0.7071067811865475) AS distance, CASE WHEN (listings.latitude >= 38.3459963 AND listings.longitude >= -0.4906855000000405) THEN  45.0 WHEN (listings.latitude <  38.3459963 AND listings.longitude >= -0.4906855000000405) THEN 135.0 WHEN (listings.latitude <  38.3459963 AND listings.longitude <  -0.4906855000000405) THEN 225.0 WHEN (listings.latitude >= 38.3459963 AND listings.longitude <  -0.4906855000000405) THEN 315.0 END AS bearing FROM "listings" WHERE "listings"."active" = ? AND (listings.latitude BETWEEN 38.33152312168892 AND 38.36046947831109 AND listings.longitude BETWEEN -0.5091396295858905 AND -0.47223137041419044)  ORDER BY distance  [["active", "t"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 8]]
+  Rendered partial/_navbar.html.erb (2.4ms)
+  Rendered pages/_filter.html.erb (7.7ms)
+  Rendered pages/_list.html.erb (0.7ms)
+  Rendered pages/search.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 116ms (Views: 112.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&lat=38.3459963&lng=-0.4906855000000405&search=%E3%82%B9%E3%83%9A%E3%82%A4%E3%83%B3%E3%83%90%E3%83%AC%E3%83%B3%E3%82%B7%E3%82%A2%E3%82%A2%E3%83%AA%E3%82%AB%E3%83%B3%E3%83%86&start_date=&end_date=&commit=%E6%A4%9C%E7%B4%A2" for ::1 at 2017-02-24 05:07:45 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "lat"=>"38.3459963", "lng"=>"-0.4906855000000405", "search"=>"スペインバレンシアアリカンテ", "start_date"=>"", "end_date"=>"", "commit"=>"検索"}
+  [1m[35mListing Load (0.4ms)[0m  SELECT DISTINCT listings.*, (69.09332411348201 * ABS(listings.latitude - 38.3459963) * 0.7071067811865475) + (59.836573914187355 * ABS(listings.longitude - -0.4906855000000405) * 0.7071067811865475) AS distance, CASE WHEN (listings.latitude >= 38.3459963 AND listings.longitude >= -0.4906855000000405) THEN  45.0 WHEN (listings.latitude <  38.3459963 AND listings.longitude >= -0.4906855000000405) THEN 135.0 WHEN (listings.latitude <  38.3459963 AND listings.longitude <  -0.4906855000000405) THEN 225.0 WHEN (listings.latitude >= 38.3459963 AND listings.longitude <  -0.4906855000000405) THEN 315.0 END AS bearing FROM "listings" WHERE "listings"."active" = ? AND (listings.latitude BETWEEN 38.33152312168892 AND 38.36046947831109 AND listings.longitude BETWEEN -0.5091396295858905 AND -0.47223137041419044)  ORDER BY distance  [["active", "t"]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 8]]
+  Rendered partial/_navbar.html.erb (17.6ms)
+  Rendered pages/_filter.html.erb (5.6ms)
+  Rendered pages/_list.html.erb (0.6ms)
+  Rendered pages/search.html.erb within layouts/application (32.2ms)
+Completed 200 OK in 538ms (Views: 494.4ms | ActiveRecord: 1.6ms)
