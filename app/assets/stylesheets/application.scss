@@ -8,7 +8,7 @@
 .jumbotron {
   padding-top: 0px;
   // 背景画像を暗くする
-  background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.05) ), url(person-845325_1920.jpg);
+  background: url(amoride-top.jpg);
   background-size: cover;
   // 背景画像の位置を決める
   background-position: 50% 50%;
@@ -25,15 +25,18 @@
     background: transparent;
     border-color: transparent;
     z-index: 10;
+    font-weight: 600;
+    background-color: rgba(0, 0, 0,0.2);
 }
 
 .navbar-default .navbar-nav > li > a {
-    color: white;
-    font-size: 13px;
+    color:white;
+    font-size: 14px;
 }
 
 .navbar-default .navbar-brand {
-    color: white;
+    color:black;
+    font-weight: 700;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
@@ -45,6 +48,7 @@
     background: #fff;
     border-color: #fff;
     z-index: 10;
+    font-weight: 700;
 }
 
 .navbar-devise .navbar-nav > li > a {
@@ -60,6 +64,7 @@
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
     background-color: transparent;
     color: rgb(255, 255, 255);
+    font-weight: 800;
 }
 
 //facebookボタン
@@ -395,7 +400,7 @@ li#nav-publish a{
   left: 0;
   right: 0;
   padding: 30px 0;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.4);
 }
 
 @media (min-width: 992px){
