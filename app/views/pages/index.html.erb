@@ -145,11 +145,6 @@ function init() {
     document.getElementById('lat').value = lat ;
     document.getElementById('lng').value = lng ;
 
-    if (!place.geometry) {
-      window.alert("Autocomplete's returned place contains no geometry");
-      return;
-    }
-
   });
 }
 

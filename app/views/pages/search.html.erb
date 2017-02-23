@@ -95,10 +95,6 @@ function initMap() {
     markers = [];
 
     var place = autocomplete.getPlace();
-    if (!place.geometry) {
-      window.alert("Autocomplete's returned place contains no geometry");
-      return;
-    }
 
     // If the place has a geometry, then present it on a map.
     if (place.geometry.viewport) {
