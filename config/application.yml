@@ -10,8 +10,8 @@
 #   stripe_api_key: sk_live_EeHnL644i6zo4Iyq4v1KdV9H
 #   stripe_publishable_key: pk_live_9lcthxpSIHbGwmdO941O1XVU
 
-facebook_app_id: "261618660944198"
-facebook_app_secret: "75d91aeb0506e0d22594734615dd0c2f"
+facebook_app_id: "2211067105785248"
+facebook_app_secret: "f681eddeca95454accdaea84061fbddb"
 
 S3_BUCKET_NAME: "amotest"
 AWS_ACCESS_KEY_ID: "AKIAJGSEKIGBCMA35QNQ"
