@@ -1,4 +1,6 @@
 # AmoRide
+Railsで開発したC2Cの自転車シェアリングサービス 『AmoRide』 
+http://amoride.com/
 
-デモ動画
+画面デモ動画
 https://www.youtube.com/watch?v=yVkAg96R7TA
